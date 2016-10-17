@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="author" extends="struts-default" namespace="/author">
+    	<action name="addAuthorPro" class="author.action.AddAuthorAction">
+    		<result>/WEB-INF/content/author/success.jsp</result>
+    		<result name="error">/WEB-INF/content/error.jsp</result>
+    	</action>
+    	
+    	<action name="viewAllAuthors" class="author.action.ViewAllAuthorsAction">
+    		<result>/WEB-INF/content/author/listAuthors.jsp</result>
+    		<result name="error">/WEB-INF/content/error.jsp</result>
+    	</action>
+    	
+    	<action name="searchBooksOfAuthor" class="author.action.SearchBooksOfAuthorAction">
+    		<result>/WEB-INF/content/author/showBooksOfAuthor.jsp</result>
+    		<result name="error">/WEB-INF/content/error.jsp</result>
+		</action>    
+		
+		<action name="viewAllBooks">
+    		<result type="redirectAction">
+    			<param name="actionName">viewAllBooks</param>    		
+    			<param name="namespace">/book</param>
+			</result>
+    	</action>
+    	
+    	<action name="updateAuthor" class="author.action.UpdateAuthorAction">
+    		<result type="chain">viewAllAuthors</result>
+    		<result name="error">/WEB-INF/content/error.jsp</result>
+    	</action>
+		 
+    	<action name="*">
+    		<result>/WEB-INF/content/author/{1}.jsp</result>
+    	</action>
+    </package>
+</struts>
