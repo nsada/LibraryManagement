@@ -6,6 +6,7 @@
     <title>主页</title>
 </rapid:override>  
 <rapid:override name="content">  
+	<h1>Version 1.1的index</h1>
     <div class="container table-center">
 		<ul class="row">
 		    <h2 class="text-center">Hello! Here is the index of tmylibrary~</h2><br/>

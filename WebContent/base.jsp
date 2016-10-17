@@ -24,7 +24,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigetion">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Library</a>
+				<a class="navbar-brand" href="#">Library 1.1</a>
 			</div>
 			<div class="collapse navbar-collapse" id="navbar-collapse-basepage">
             <ul class="nav navbar-nav">
